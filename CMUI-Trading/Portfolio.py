@@ -22,11 +22,11 @@ import smtplib
 class CryptoFetch:
     """The class to monitor prices and send updates"""
     def __init__(self):
-        # connect to db
-        self.conn = mysql.connect(host="192.168.31.206",
-                                    user="cmui",
-                                    passwd="Yb1dAI3vna3xTAMuJNOV",
-                                    db="CMUIdb")
+        # connect to db// Change these values
+        self.conn = mysql.connect(host="ip",
+                                    user="user",
+                                    passwd="pass",
+                                    db="db")
         self.cursor = self.conn.cursor()
         pricepage = requests.get("https://coinmarketcap.com/all/views/all/").text
         self.pricepage = BeautifulSoup(pricepage, 'lxml')
