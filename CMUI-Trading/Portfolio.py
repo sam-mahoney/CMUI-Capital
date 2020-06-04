@@ -1,13 +1,6 @@
 # CMUI Trading
 # By Sam Mahoney
 
-# TODO
-# Webapp? nah
-# Add new assets? nah
-# Add price alerts!
-# Add holding alerts!
-# Log File!
-
 import mysql.connector as mysql
 import requests
 from bs4 import BeautifulSoup
@@ -170,8 +163,8 @@ class CryptoFetch:
         print()
         print("[*] Sending Weekly Update")
         #fetch emails
-        gmail_sender = 'cmuicaptial@gmail.com'
-        gmail_passwd = 'Trading1234'
+        gmail_sender = ''
+        gmail_passwd = ''
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.ehlo()
         server.starttls()
